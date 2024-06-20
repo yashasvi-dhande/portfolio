@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+
+    }
+
+    body {
+        background-color: rgb(0, 0, 33);
+        color: white;
+        font-family: 'Poppins', sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    .thirdSection {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 80px;
+
+    }
+
+    .leftsideSection {
+        margin-left: 160px;
+        margin-top: 70px;
+        font-size: large;
+    }
+
+    .rightsideSection {
+        margin: 0px;
+        padding: 0px;
+        width: 58%;
+        height: 30vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: -58px;
+    }
+
+
+    form {
+        background-color: rgb(146, 146, 150)
+        flex-direction: column;
+        margin-top: 100px;
+        margin-left: 190px;
+        padding: 3vw 10vw;
+        width: 90%;
+        max-width: 600px;
+        border-radius: 30px;
+    }
+
+    form input {
+        width: 85%;
+    }
+
+    form textarea{
+        width: 85%;
+    }
+   
+
+    form input,
+    form textarea {
+        border: 0;
+        margin: 10px 0;
+        padding: 20px;
+        outline: none;
+        background: #f5f5f5;
+        font-size: 16px;
+    }
+
+    form button {
+        padding: 15px;
+        background: #ff5361;
+        color: #fff;
+        font-size: 18px;
+        border: 0;
+        outline: none;
+        cursor: pointer;
+        width: 150px;
+        margin: 20px auto 0;
+        border-radius: 30px;
+        display: flex;
+        justify-content: center;
+    }
+
+    form button:hover {
+        color: #fff;
+        background: green;
+        font-size: 1rem;
+    }
+
+    form h3 {
+        color: #f6f2f2;
+        font-weight: 800;
+        margin-bottom: 30px;
+    }
+
+    iframe {
+        margin: 0;
+        padding: 5%;
+        width: 190%;
+        height: 290px;
+    }
+
+
+    .contact-menu {
+        text-align: center;
+        margin: 40px;
+    }
+
+    .contact-menu ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .contact-menu li {
+        display: inline-block;
+        margin: 0 10px;
+    }
+
+    .contact-menu a {
+        text-decoration: white;
+        color: white;
+    }
+
+    .contact-menu i {
+        margin-right: 5px;
+    }
+
+</style>
+
+
+<body>
+
+    <main>
+        
+        <section class="thirdSection">
+            <div class="leftsideSection">
+                <h2>Email </h2>
+                <p>yashasvidhande@gmail.com</p><br><br>
+                <h2>Phone no. </h2>
+                <p>8856862481</p><br>
+                <h2>Address </h2>
+                <p>Bhandara, Maharashtra.</p><br><br>
+                <h3>Embeded Location Map</h3>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d59526.07092291383!2d79.61215204973874!3d21.177080846795636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a2b38aba7629c35%3A0xeb5bb18c18ae8f17!2sBhandara%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1718533124044!5m2!1sen!2sin"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+
+            </div>
+
+            <div class="rightsideSection">
+                <form>
+                    <h3>GET IN TOUCH</h3>
+                    <input type="=text" name="name" class="input" placeholder="Enter Your Name">
+                    <input type="=Email" name="Email" class="input" placeholder="Enter Your Email">
+                    <textarea name="msg" id="msg" cols="30" rows="10" placeholder="Enter Your Message"></textarea>
+                    <button type="=Submit">SEND</button>
+                </form>
+            </div>
+        </section>
+
+
+    </main>
+</body>
+
+</html>
