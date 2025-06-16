@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #000021;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            background-color: #12123E;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        nav ul li {
+            margin-left: 1.5rem;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+        nav ul li a:hover {
+            color: rgb(137, 137, 234);
+        }
+        .section {
+            padding: 2rem;
+        }
+        .skills-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        .skill {
+            background-color: #1a1a40;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    
+    <section class="section">
+       <section class="section" id="skills">
+    <h2>My Skills</h2>
+    <p>These are the key technical skills I have worked with:</p>
+
+    <h3 class="category">Web Development</h3>
+    <div class="skill-block">
+      <p>HTML & CSS</p>
+      <div class="progress-bar">
+        <div class="progress-fill" style="width: 90%;">90%</div>
+      </div>
+    </div>
+
+    <h3 class="category">Programming Languages</h3>
+    <div class="skill-block">
+      <p>Python</p>
+      <div class="progress-bar">
+        <div class="progress-fill" style="width: 85%;">85%</div>
+      </div>
+    </div>
+
+    <div class="skill-block">
+      <p>R Programming</p>
+      <div class="progress-bar">
+        <div class="progress-fill" style="width: 75%;">75%</div>
+      </div>
+    </div>
+
+    <div class="skill-block">
+      <p>MATLAB</p>
+      <div class="progress-bar">
+        <div class="progress-fill" style="width: 70%;">70%</div>
+      </div>
+    </div>
+  </section>
+    
+</body>
+</html>
