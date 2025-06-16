@@ -19,6 +19,7 @@
             background-color: rgb(0, 0, 33);
             color: white;
             font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
         }
 
         nav {
@@ -27,6 +28,9 @@
             align-items: center;
             padding: 1rem 2rem;
             background-color: rgb(18, 18, 62);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
         nav ul {
@@ -49,9 +53,17 @@
 
         .section {
             padding: 4rem 2rem;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
         }
 
-        .firstSection, .secondSection, .thirdSection {
+        .section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .firstSection, .secondSection, .thirdSection, .fourthSection, .fifthSection {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
@@ -84,6 +96,48 @@
         .rightSection img {
             width: 100%;
             max-width: 400px;
+        }
+
+        .skills-list, .projects-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .skill, .project {
+            background-color: #1a1a40;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+        }
+
+        .skill-block {
+        margin-bottom: 2rem;
+        }
+
+        .skill-label {
+            display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: 500;
+        color: #ffffff;
+        }
+
+        .progress-bar {
+        background-color: #1e1e2e;
+        border-radius: 10px;
+        height: 12px;
+        margin-top: 0.3rem;
+        overflow: hidden;
+        }
+
+        .progress-fill {
+        background-color: #00d4d4;
+        height: 100%;
+        width: 0;
+        border-radius: 10px;
+        transition: width 2s ease-in-out;
         }
 
         form {
@@ -122,6 +176,24 @@
             margin-top: 1rem;
         }
 
+        /* Make the project boxes fit in a row and share equal width */
+        .projects-list {
+          display: flex;
+          gap: 20px; /* Adjust spacing between boxes as needed */
+          justify-content: space-between;
+        }
+
+        .project {
+          flex: 1 1 0;
+          min-width: 0;
+          box-sizing: border-box;
+          /* Optional: add padding, border, or background for better appearance */
+          padding: 16px;
+          border: 1px solid #ccc;
+          border-radius: 8px;
+          background: #1a1a40;
+        }
+
         @media (max-width: 768px) {
             nav {
                 flex-direction: column;
@@ -149,16 +221,16 @@
         <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
-    <section class="section firstSection">
+    <section class="section firstSection visible">
         <div class="leftSection">
             <p>Hi there, My name is Yashasvi</p>
-            <p>I am an Intern Web Developer at Minimum Code Culture Pvt. Ltd.</p>
-            <!-- <button class="btn" onclick="location.href='YASHASVI_DHANDE_Resume.pdf'">Download Resume</button> -->
+            <p>a highly motivated postgraduate fresher passionate about technology and continuous learning.</p>
             <a href="./YASHASVI DHANDE_Resume.pdf" target="_blank">
                 <button class="btn">Download Resume</button>
             </a>
@@ -182,6 +254,76 @@
         </div>
     </section>
 
+    <section class="section" id="skills">
+  <h2>My Skills</h2>
+  <p>These are the key technical skills I have worked with:</p>
+
+  <h3 class="category">Web Development</h3>
+  <div class="skill-block">
+    <div class="skill-label">
+      <p>HTML & CSS</p>
+      <span>90%</span>
+    </div>
+    <div class="progress-bar">
+      <div class="progress-fill" data-width="90%"></div>
+    </div>
+  </div>
+
+  <h3 class="category">Programming Languages</h3>
+  <div class="skill-block">
+    <div class="skill-label">
+      <p>Python</p>
+      <span>85%</span>
+    </div>
+    <div class="progress-bar">
+      <div class="progress-fill" data-width="85%"></div>
+    </div>
+  </div>
+
+  <div class="skill-block">
+    <div class="skill-label">
+      <p>R Programming</p>
+      <span>75%</span>
+    </div>
+    <div class="progress-bar">
+      <div class="progress-fill" data-width="75%"></div>
+    </div>
+  </div>
+
+  <div class="skill-block">
+    <div class="skill-label">
+      <p>MATLAB</p>
+      <span>70%</span>
+    </div>
+    <div class="progress-bar">
+      <div class="progress-fill" data-width="70%"></div>
+    </div>
+  </div>
+</section>
+
+
+    <section class="section fifthSection" id="projects">
+        <h2>My Projects</h2>
+        <p>Below are some of the key projects I have worked on that demonstrate my technical and problem-solving abilities:</p>
+        <div class="projects-list">
+            <div class="project">
+                <h3>Portfolio Website</h3>
+                <p>Personal website made with HTML, CSS, hosted for free using GitHub Pages.</p>
+            </div>
+
+            <div class="project">
+                <h3>Inventory Models Using Soft Computing</h3>
+                <p>Developed fuzzy logic-based algorithms for two-warehouse inventory systems.</p>
+            </div>
+            
+            <div class="project">
+                <h3>Smart Security: Image Encryption</h3>
+                <p>Dual-layer image encryption using Modified Feistel and Mersenne Prime masking in MATLAB.</p>
+            </div>
+              
+        </div>
+    </section>
+
     <section class="section thirdSection" id="contact">
         <div class="leftsideSection">
             <h2>Email</h2>
@@ -190,7 +332,6 @@
             <a href="tel:8856862481">8856862481</a>
             <h2>Address</h2>
             <p>Bhandara, Maharashtra</p>
-            <!-- <h3>Embedded Location Map</h3> -->
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d59526.070922655716!2d79.61215167259375!3d21.177080847436923!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a2b38aba7629c35%3A0xeb5bb18c18ae8f17!2sBhandara%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1749135101848!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
         <div class="rightsideSection">
@@ -203,5 +344,26 @@
             </form>
         </div>
     </section>
+
+    <script>
+        const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            // Animate skill bars
+            const bars = entry.target.querySelectorAll('.progress-fill');
+            bars.forEach(bar => {
+            const targetWidth = bar.getAttribute('data-width');
+            bar.style.width = targetWidth;
+            });
+        }
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.section').forEach(section => {
+        observer.observe(section);
+    });
+    </script>
+
 </body>
 </html>
